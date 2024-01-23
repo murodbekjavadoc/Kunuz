@@ -10,6 +10,6 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
 private InitService initService;
     @Override
     public void run(String... args) throws Exception {
-        initService.initAdmin();
+      initService.initAdmin();
     }
 }

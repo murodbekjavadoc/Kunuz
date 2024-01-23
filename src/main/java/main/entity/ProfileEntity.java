@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import main.enums.ProfileRole;
-import main.enums.ProfileStatus;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table (name = "ProfileEntity")
+@Table (name = "Profile")
 public class ProfileEntity extends BaseEntity {
     @Column(nullable = false)
     private String name;
@@ -19,6 +20,8 @@ public class ProfileEntity extends BaseEntity {
     private String email;
     @Column(nullable = false)
     private String password;
+    @Column(name = "updated_date")
+    protected LocalDateTime updatedDate;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")

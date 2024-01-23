@@ -14,5 +14,4 @@ public class InitController {
         initService.initAdmin();
         return "DONE";
     }
-
 }

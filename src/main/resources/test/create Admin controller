@@ -1,0 +1,10 @@
+@RestController
+@RequestMapping("/init")
+public class InitController {
+    @Autowired
+    private InitService initService;
+    public String initAdmin(){
+        initService.initAdmin();
+        return "DONE";
+    }
+}
