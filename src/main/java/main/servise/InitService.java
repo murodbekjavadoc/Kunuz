@@ -2,6 +2,7 @@ package main.servise;
 
 import main.entity.ProfileEntity;
 import main.enums.ProfileRole;
+import main.enums.ProfileStatus;
 import main.repository.ProfileRepository;
 import main.util.MDUtil;
 import org.springframework.beans.factory.annotation.Autowired;

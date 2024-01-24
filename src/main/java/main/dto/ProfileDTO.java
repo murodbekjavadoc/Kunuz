@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 import main.enums.ProfileRole;
+import main.enums.ProfileStatus;
 
 import java.time.LocalDateTime;
 

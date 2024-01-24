@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class BaseDTO {
-    private Integer id;
-    private LocalDateTime createdDate;
-    private Boolean visible;
+    protected Integer id;
+    protected LocalDateTime createdDate;
+    protected Boolean visible;
 }

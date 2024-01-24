@@ -1,10 +1,12 @@
 package main.entity;
 
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
 public class ArticleEntity extends BaseEntity {
 //    id(uuid),title,description,content,shared_count,image_id,
 //    region_id,category_id,moderator_id,publisher_id,status(Published,NotPublished)

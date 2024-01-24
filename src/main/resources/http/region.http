@@ -1,0 +1,23 @@
+### create by id
+POST http://localhost:8080/region
+Content-Type: application/json
+
+{"nameUz": "Murod",
+  "nameRu": "Murodbek",
+  "nameEng": "BekMurodbek",
+  "orderNumber": 1
+}
+
+### put by id
+PUT http://localhost:8080/region/{{id}}
+Content-Type: application/json
+
+{
+
+}
+
+### Delete by Id ==Vizible Bolean
+DELETE http://localhost:8080/region/1
+
+### GetAll
+GET http://localhost:8080/region
