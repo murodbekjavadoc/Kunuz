@@ -1,14 +1,15 @@
-### create by id
+### <1> create by id
 POST http://localhost:8080/region
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYxNTcxOTYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYyNDM1OTYsImlzcyI6Ikt1blV6VGVzdCJ9.KiUB4tuh6nyFw00hgkiEFQ20hWUXYtNixMbNfRxY_H4eQzWHADsBMihxK27ylpTQTs-ZdFKF8ZC6Fdml-5hdeg
 
-{"nameUz": "Murod",
-  "nameRu": "Murodbek",
-  "nameEng": "BekMurodbek",
+{"nameUz": "uzb",
+  "nameRu": "ru",
+  "nameEng": "eng",
   "orderNumber": 1
 }
 
-### put by id
+###<2> Put by id
 PUT http://localhost:8080/region/{{id}}
 Content-Type: application/json
 
@@ -16,8 +17,11 @@ Content-Type: application/json
 
 }
 
-### Delete by Id ==Vizible Bolean
+### <3> Delete by Id ==Vizible Bolean
 DELETE http://localhost:8080/region/1
 
-### GetAll
+### <4> GetAll  task
 GET http://localhost:8080/region
+
+### <5> get By lang
+GET http://localhost:8080/region/byLang?lang=uz

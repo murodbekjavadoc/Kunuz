@@ -2,6 +2,7 @@ package main.servise;
 
 import main.dto.RegionDTO;
 import main.entity.RegionEntity;
+import main.enums.AppLanguage;
 import main.exp.AppBadException;
 import main.repository.RegionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,22 +33,42 @@ public class RegionService {
         entity.setNameEng(dto.getNameEng());
         regionRepository.save(entity);
     }
+
     // task =3=
-    public  void deleteById(Integer id) {
+    public void deleteById(Integer id) {
         RegionEntity entity = get(id);
         entity.setVisible(false);
         regionRepository.save(entity);
     }
+
     // task =4=
     public List<RegionDTO> getALl() {
-     Iterable<RegionEntity> listEntity= regionRepository.findAll();
-     List<RegionDTO> listDTO = new LinkedList<>();
-     for (RegionEntity entity:listEntity){
-         listDTO.add(setRegionDTO(entity));
-     }
+        Iterable<RegionEntity> listEntity = regionRepository.findAll();
+        List<RegionDTO> listDTO = new LinkedList<>();
+        for (RegionEntity entity : listEntity) {
+            listDTO.add(setRegionDTO(entity));
+        }
         return listDTO;
     }
 
+    // task =5=
+    public List<RegionDTO> getByLang(AppLanguage lang) {
+        List<RegionDTO> dtoList = new LinkedList<>();
+        Iterable<RegionEntity> all = regionRepository.findAll();
+
+        for (RegionEntity entity : all) {
+            RegionDTO dto = new RegionDTO();
+            dto.setId(entity.getId());
+            switch (lang) {
+                case uz -> dto.setName(entity.getNameUz());
+                case ru -> dto.setName(entity.getNameRu());
+                default -> dto.setName(entity.getNameEng());
+            }
+            ;
+            dtoList.add(dto);
+        }
+        return dtoList;
+    }
     private RegionDTO setRegionDTO(RegionEntity entity) {
         RegionDTO regionDTO = new RegionDTO();
         regionDTO.setId(entity.getId());
@@ -60,7 +81,7 @@ public class RegionService {
         return regionDTO;
     }
 
-    // Utils
+    // ======================= Utils ==============================
     private RegionEntity fromRegionDTOToRegionEntity(RegionDTO dto) {
         RegionEntity entity = new RegionEntity();
         entity.setOrderNumber(dto.getOrderNumber());
@@ -69,12 +90,9 @@ public class RegionService {
         entity.setNameEng(dto.getNameEng());
         return entity;
     }
-    private RegionEntity get(Integer id){
-        Optional<RegionEntity> optional = regionRepository.findById(id);
-        if (optional.isEmpty()) {
-         throw  new AppBadException("Id not found");
-        }
-        return optional.get();
-    }
 
+    private RegionEntity get(Integer id) {
+     return  regionRepository.findById(id).orElseThrow(()
+             -> new AppBadException("Region not found"));
+    }
 }

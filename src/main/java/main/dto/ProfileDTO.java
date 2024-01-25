@@ -19,6 +19,7 @@ public class ProfileDTO extends BaseDTO{
     private ProfileStatus status;
     private ProfileRole role;
     protected LocalDateTime updatedDate;
+    private String jwt;
 
 
 }

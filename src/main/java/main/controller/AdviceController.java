@@ -14,6 +14,7 @@ public class AdviceController {
     }
     @ExceptionHandler(RuntimeException.class)
     private ResponseEntity<?> handle (RuntimeException e ){
+        e.printStackTrace();
         return ResponseEntity.badRequest().body(e.getMessage());
     }
 }

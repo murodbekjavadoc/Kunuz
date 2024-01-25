@@ -5,6 +5,7 @@ import main.dto.ProfileDTO;
 import main.entity.ProfileEntity;
 import main.exp.AppBadException;
 import main.repository.ProfileRepository;
+import main.util.JWTUtil;
 import main.util.MDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,13 +25,12 @@ public class AuthService {
         if (optional.isEmpty()){
             throw new AppBadException("email or password nor wrong");
         }
-
         ProfileEntity entity = optional.get();
-        ProfileDTO dto = new ProfileDTO();
-        dto.setName(entity.getName());
-        dto.setSurname(entity.getSurname());
-        dto.setRole(entity.getRole());
-
-        return dto;
+        ProfileDTO profileDTO = new ProfileDTO();
+        profileDTO.setName(entity.getName());
+        profileDTO.setSurname(entity.getSurname());
+        profileDTO.setRole(entity.getRole());
+        profileDTO.setJwt(JWTUtil.encode(entity.getId(),entity.getRole()));
+        return profileDTO;
     }
 }

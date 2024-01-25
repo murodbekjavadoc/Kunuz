@@ -1,0 +1,10 @@
+### Create profile
+POST http://localhost:8080/profile
+Content-Type: application/json
+
+{
+  "email": "murod@mail2.ru",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
