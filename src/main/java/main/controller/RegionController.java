@@ -62,7 +62,7 @@ public class RegionController {
     // task =3=
     //task =4=
     @GetMapping("/getAllList")
-    public ResponseEntity<List<RegionDTO>> getAll(@RequestParam(value = "jwt", defaultValue = " ") String jwt) {
+    public ResponseEntity<List<RegionDTO>> getAll(@RequestHeader(value = "Authorization", defaultValue = " ") String jwt) {
         JwtDTO jwtDTO = JWTUtil.decode(jwt);
         if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();

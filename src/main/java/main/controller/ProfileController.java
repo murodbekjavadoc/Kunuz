@@ -38,14 +38,4 @@ public class ProfileController {
         profileService.update(id, dto);
         return ResponseEntity.ok(true);
     }
-
-    //        1. Create profile (ADMIN) (can create MODERATOR,PUBLISHER))
-//            (name,surname,email,phone,password,status,role)
-//            2. Update Profile (ADMIN)
-//    3. Update Profile Detail (ANY) (Profile updates own details)
-//            4. Profile List (ADMIN) (Pagination)
-//            5. Delete Profile By Id (ADMIN)
-//    6. Update Photo (ANY) (Murojat qilgan odamni rasmini upda qilish)   (remove old image)
-//    photo_id
-//    7. Filter (name,surname,phone,role,created_date_from,created_date_to)
 }

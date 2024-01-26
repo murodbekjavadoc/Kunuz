@@ -15,3 +15,14 @@ Content-Type: application/json
 "email": "murod@mail2.ru",
 "password": "123"
 }
+
+### Create profile
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "email": "murod@mail2.ru",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
