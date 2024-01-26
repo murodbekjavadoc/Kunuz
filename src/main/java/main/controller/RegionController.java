@@ -9,6 +9,7 @@ import main.servise.RegionService;
 import main.util.JWTUtil;
 import org.hibernate.sql.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,10 +21,11 @@ import java.util.List;
 public class RegionController {
     @Autowired
     private RegionService regionService;
+
     //task =1=
     @PostMapping("")
-    public ResponseEntity<RegionDTO> create (@RequestBody RegionDTO dto,
-                                             @RequestHeader(value = "Authorization") String jwt){
+    public ResponseEntity<RegionDTO> create(@RequestBody RegionDTO dto,
+                                            @RequestHeader(value = "Authorization") String jwt) {
         JwtDTO jwtDTO = JWTUtil.decode(jwt);
         if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
@@ -31,30 +33,45 @@ public class RegionController {
         RegionDTO regionDTO = regionService.create(dto);
         return ResponseEntity.ok(regionDTO);
     }
-    // task =2=
-    @PutMapping("{id}")
-    public ResponseEntity<?> update(
-            @PathVariable ("id") Integer id,
-            @RequestBody RegionDTO regionDTO){
-       regionService.update(id,regionDTO);
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Boolean> deleteById(@PathVariable("id") Integer id,
+                                              @RequestHeader(value = "Authorization") String jwt) {
+        JwtDTO jwtDTO = JWTUtil.decode(jwt);
+        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        regionService.deleteById(id);
         return ResponseEntity.ok(true);
     }
-    // task =3=
-    @DeleteMapping("{id}")
-    public ResponseEntity<Boolean> deleteById(@PathVariable("id")Integer id){
-        regionService.deleteById(id);
-      return ResponseEntity.ok(true);
-    }
-    //task =4=
-    @GetMapping("")
-    public ResponseEntity<List<RegionDTO>> getAll(){
-        List<RegionDTO> dtoList = regionService.getALl();
-        return ResponseEntity.ok(dtoList);
+
+    @PutMapping("{id}")
+    public ResponseEntity<?> update(
+            @PathVariable("id") Integer id,
+            @RequestHeader(value = "Authorization", defaultValue = " ") String jwt,
+            @RequestBody RegionDTO regionDTO) {
+
+        JwtDTO jwtDTO = JWTUtil.decode(jwt);
+        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)){
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        regionService.update(id, regionDTO);
+        return ResponseEntity.ok(true);
     }
 
+    // task =3=
+    //task =4=
+    @GetMapping("/getAllList")
+    public ResponseEntity<List<RegionDTO>> getAll(@RequestParam(value = "jwt", defaultValue = " ") String jwt) {
+        JwtDTO jwtDTO = JWTUtil.decode(jwt);
+        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        return ResponseEntity.ok(regionService.getALl());
+    }
     // task =5=
     @GetMapping("/byLang")
-    public ResponseEntity<List<RegionDTO>> getByLang(@RequestParam (value = "lang",defaultValue = "uz") AppLanguage language){
+    public ResponseEntity<List<RegionDTO>> getByLang(@RequestParam(value = "lang", defaultValue = "uz") AppLanguage language) {
         List<RegionDTO> byLang = regionService.getByLang(language);
         return ResponseEntity.ok(byLang);
     }

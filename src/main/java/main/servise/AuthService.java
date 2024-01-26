@@ -33,4 +33,25 @@ public class AuthService {
         profileDTO.setJwt(JWTUtil.encode(entity.getId(),entity.getRole()));
         return profileDTO;
     }
+
+    public ProfileDTO create(ProfileDTO dto) {
+        Optional<ProfileEntity> option = profileRepository.findByEmail(dto.getEmail());
+        if (option.isPresent()) {
+            throw new AppBadException("Email royhatdan otkazilgan");
+        }
+        ProfileEntity entity = new ProfileEntity();
+        entity.setName(dto.getName());
+        entity.setSurname(dto.getSurname());
+        entity.setEmail(dto.getEmail());
+        entity.setPassword(MDUtil.encode(dto.getPassword()));
+
+        profileRepository.save(entity);
+        dto.setJwt(JWTUtil.encode(dto.getId(),dto.getRole()));
+
+        dto.setCreatedDate(entity.getCreatedDate());
+        dto.setId(entity.getId());
+        dto.setRole(entity.getRole());
+        dto.setStatus(entity.getStatus());
+        return dto;
+    }
 }

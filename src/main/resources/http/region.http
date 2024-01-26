@@ -1,27 +1,36 @@
 ### <1> create by id
 POST http://localhost:8080/region
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYxNTcxOTYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYyNDM1OTYsImlzcyI6Ikt1blV6VGVzdCJ9.KiUB4tuh6nyFw00hgkiEFQ20hWUXYtNixMbNfRxY_H4eQzWHADsBMihxK27ylpTQTs-ZdFKF8ZC6Fdml-5hdeg
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
 
-{"nameUz": "uzb",
-  "nameRu": "ru",
-  "nameEng": "eng",
-  "orderNumber": 1
+{"nameUz": "uzbek",
+  "nameRu": "rus",
+  "nameEng": "english",
+  "orderNumber": 2
 }
 
-###<2> Put by id
-PUT http://localhost:8080/region/{{id}}
+###
+PUT http://localhost:8080/region/1
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
 
-{
-
+{"nameUz": "uzbekistan",
+  "nameRu": "russian",
+  "nameEng": "english",
+  "orderNumber": 3
 }
 
 ### <3> Delete by Id ==Vizible Bolean
 DELETE http://localhost:8080/region/1
 
-### <4> GetAll  task
-GET http://localhost:8080/region
+### ### Get all list faqat admin jwt kelsa ishga tushadi
+GET http://localhost:8080/region/getAllList?jwt=eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
 
 ### <5> get By lang
 GET http://localhost:8080/region/byLang?lang=uz
+
+###
+PUT http://localhost:8080/region/{{id}
+Content-Type: application/json
+
+{}

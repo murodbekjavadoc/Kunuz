@@ -1,0 +1,17 @@
+### Admin login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@mail.ru",
+  "password": "12345"
+}
+
+### User User
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+"email": "murod@mail2.ru",
+"password": "123"
+}
