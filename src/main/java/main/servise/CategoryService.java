@@ -16,6 +16,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+//    @PostMapping("")
     public CategoryDTO create(CategoryDTO dto) {
         CategoryEntity entity = new CategoryEntity();
 
@@ -30,6 +31,7 @@ public class CategoryService {
 
         return dto;
     }
+//    @PutMapping("{id}")
     public void updateById(CategoryDTO dto, Integer id) {
         CategoryEntity entity = get(id);
         if (!(dto.getOrderNumber() ==null)){

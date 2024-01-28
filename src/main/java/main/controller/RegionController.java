@@ -71,12 +71,9 @@ public class RegionController {
     }
     // task =5=
     @GetMapping("/byLang")
-    public ResponseEntity<List<RegionDTO>> getByLang(@RequestParam(value = "lang", defaultValue = "uz") AppLanguage language) {
-        List<RegionDTO> byLang = regionService.getByLang(language);
+    public ResponseEntity<List<RegionDTO>> getByLang(@RequestParam(value = "lang", defaultValue = "uz") AppLanguage lang) {
+        List<RegionDTO> byLang = regionService.getByLang(lang);
         return ResponseEntity.ok(byLang);
     }
 
-//        (id,key,name_uz, name_ru, name_en,visible,created_date)
-//            5. Get By Lang (Language keladi shu language dagi name larini berib yuboramiz)
-//        (id,key,name) (name ga tegishli name_.. dagi qiymat qo'yiladi.) (visible true)
 }

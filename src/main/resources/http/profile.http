@@ -1,10 +1,33 @@
-### Create profile
-POST http://localhost:8080/profile
+### <1> profileCreatedByAdmin   <Admin>
+POST http://localhost:8080/profile/profileCreatedByAdmin
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYzNDMxMTksImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY0Mjk1MTksImlzcyI6Ikt1blV6VGVzdCJ9._DbUvdRKd10c52m36eY_lASrIxrEROVvGrIKulU8oglMN_l0-nG54IpgjovHn8Sm1r4sZxuAgGnTjgytfOxQ2g
 
 {
-  "email": "murod@mail2.ru",
+
+  "email": "murod@mail12.ru",
   "name": "Murodbek",
   "surname": "Azimov",
   "password": "123"
 }
+
+### <2> updateprofile <Admin>
+POST http://localhost:8080/profile/updateProfile?id=2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNzg3NzYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNjUxNzYsImlzcyI6Ikt1blV6VGVzdCJ9.DEJiLtOHPBZEb89Ftbj8haT_Ip_LE5dDUQ0k49oronZYAXHgbzJSX49MH9NwDkfvFZ-r7x65jKYQfrWtuxwCAg
+
+{
+  "name": "MurodbekAlisherovich",
+  "role": "ADMIN"
+}
+
+### <3> Put user          <User>
+PUT http://localhost:8080/profile/updateUser
+
+
+### <4>getAllPagination   <Admin>
+GET http://localhost:8080/profile/getProfileList?page=2&size=5
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYzMzg1NDksImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY0MjQ5NDksImlzcyI6Ikt1blV6VGVzdCJ9.dnxwKvo9T-b-hQPSNeTUrYnuYiOJIgkk6ypwivfwiP6ZEmc5V5Zq61lKZXoDwHFs4uvjCphW2JoyD7VMoKTo1w
+
+### <5> delete by User    <Admin>   <Integer>
+DELETE http://localhost:8080/profile/{{id}}

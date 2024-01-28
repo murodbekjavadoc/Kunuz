@@ -10,8 +10,8 @@ import java.util.Date;
 
 public class JWTUtil {
     private static final int tokenLiveTime = 1000 * 3600 * 24; // 1-day
-    private static final String secretKey = "mazgi123mazgidasdasdkja1dkjas7dksdakjshdkahsdkjahsdkahs7kjhaskjdh2skjdhadasdasg7fgdfgdfd";
-
+    //private static final String secretKey = "mazgi123mazgidasdasdkja1dkjas7dksdakjshdkahsdkjahsdkahs7kjhaskjdh2skjdhadasdasg7fgdfgdfd";
+    private static final String secretKey =  base64UrlEncode("Mazgi");
     public static String encode(Integer profileId, ProfileRole role) {
         JwtBuilder jwtBuilder = Jwts.builder();
         jwtBuilder.issuedAt(new Date());
@@ -44,5 +44,13 @@ public class JWTUtil {
         ProfileRole profileRole = ProfileRole.valueOf(role);
 
         return new JwtDTO(id, profileRole);
+    }
+
+    private static String base64UrlEncode(String code) {
+        String hashcode= code;
+        for (int i = 0; i < code.length()*10; i++) {
+            hashcode=hashcode.concat(code);
+        }
+        return hashcode;
     }
 }
