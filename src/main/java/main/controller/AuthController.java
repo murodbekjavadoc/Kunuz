@@ -5,10 +5,7 @@ import main.dto.ProfileDTO;
 import main.servise.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -22,7 +19,13 @@ public class AuthController {
     }
     @PostMapping("/registration")
     public ResponseEntity<?> create(@RequestBody ProfileDTO profileDTO) {
-        ProfileDTO dto = authService.create(profileDTO);
+        ProfileDTO dto = authService.registration(profileDTO);
         return ResponseEntity.ok(dto);
     }
+
+    @GetMapping("/verification/email/{jwt}")
+    public ResponseEntity<String> emailVerification(@PathVariable("jwt") String jwt) {
+        return ResponseEntity.ok(authService.emailVerification(jwt));
+    }
+
 }

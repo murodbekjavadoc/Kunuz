@@ -16,6 +16,7 @@ public class AdviceController {
         return ResponseEntity.badRequest().body(e.getMessage());
     }
 
+    @ExceptionHandler
     private ResponseEntity<?> handle(ForbiddenException e){
         return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
     }

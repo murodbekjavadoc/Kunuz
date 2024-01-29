@@ -21,7 +21,7 @@ POST http://localhost:8080/auth/registration
 Content-Type: application/json
 
 {
-  "email": "murod@mail10.ru",
+  "email": "murodbek040894@gmail.com",
   "name": "Murodbek",
   "surname": "Azimov",
   "password": "123"

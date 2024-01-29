@@ -1,3 +1,111 @@
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 107
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murodbek040894@gmail.com",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T203859.200.json
+
+###
+
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 107
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murodbek040894@gmail.com",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T202511.200.json
+
+###
+
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 107
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murodbek040894@gmail.com",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T202108.200.json
+
+###
+
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 107
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murodbek040894@gmail.com",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T201926.400.txt
+
+###
+
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 107
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murodbek040894@gmail.com",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T195534.200.json
+
+###
+
+POST http://localhost:8080/auth/registration
+Content-Type: application/json
+Content-Length: 98
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "murod@mail10.ru",
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "password": "123"
+}
+
+<> 2024-01-29T195432.200.json
+
+###
+
 GET http://localhost:8080/articleType/getByLang?lang=en
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
@@ -662,109 +770,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "nameEng": "Murodne"}
 
 <> 2024-01-29T115406.404.json
-
-###
-
-PUT http://localhost:8080/articleType/adm/1
-Content-Type: application/json
-Content-Length: 90
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{"orderNumber": 1,
-  "nameUz": "Murodbek",
-  "nameRu": "Murodbne",
-  "nameEng": "Murodne"}
-
-###
-
-PUT http://localhost:8080/articleType/adm1
-Content-Type: application/json
-Content-Length: 90
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{"orderNumber": 1,
-  "nameUz": "Murodbek",
-  "nameRu": "Murodbne",
-  "nameEng": "Murodne"}
-
-<> 2024-01-29T115345.400.txt
-
-###
-
-PUT http://localhost:8080/articleType/adm1
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
-Content-Length: 72
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nameEng": "murodbek",
-  "nameUz": "Murodbek",
-  "nameRu": "Mrbek"
-}
-
-<> 2024-01-29T115159.400.txt
-
-###
-
-PUT http://localhost:8080/articleType/adm1
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
-Content-Length: 73
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nameEng": "murodbek",
-  "nameUz": "Murodbek",
-  "nameRu": "Mrbek",
-}
-
-<> 2024-01-29T115146.400.txt
-
-###
-
-POST http://localhost:8080/articleType/adm
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
-Content-Length: 96
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "uzbesittan",
-  "nameRu": "Murodbek",
-  "nameUz": "Murodjon",
-  "nameEng": "Murod"
-}
-
-<> 2024-01-29T115051.200.json
-
-###
-
-PUT http://localhost:8080/articleType/adm1
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
-Content-Length: 72
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "nameEng": "murodbek",
-  "nameUz": "Murodbek",
-  "nameRu": "Mrbek"
-}
-
-<> 2024-01-29T114808.400.txt
 
 ###
 

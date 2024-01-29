@@ -2,6 +2,7 @@ package main.repository;
 
 import jakarta.transaction.Transactional;
 import main.entity.ProfileEntity;
+import main.enums.ProfileStatus;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Modifying;
@@ -23,4 +24,10 @@ public interface ProfileRepository extends CrudRepository<ProfileEntity,Integer>
     @Modifying
     @Query("update RegionEntity set visible=false where id=:id")
     Integer delete(@Param("id") Integer id);
+
+    @Transactional
+    @Modifying
+    @Query("Update ProfileEntity  set status =?2 where id = ?1")
+    void updateStatus(Integer id, ProfileStatus active);
+
 }

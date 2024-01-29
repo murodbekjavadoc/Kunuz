@@ -11,4 +11,7 @@ import main.enums.ProfileRole;
 public class JwtDTO {
     private  Integer id;
     private ProfileRole profileRole;
+    public  JwtDTO (Integer id){
+        this.id=id;
+    }
 }
