@@ -9,8 +9,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class ArticleTypeEntity extends BaseEntity {
-    private String name;
-    @Column(nullable = false)
+
     private Integer order_number;
     @Column(nullable = false)
     private String name_uz;

@@ -32,8 +32,8 @@ public class RegionController {
         regionService.deleteById(id);
         return ResponseEntity.ok(true);
     }
-    @PutMapping("/adm/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+    @PutMapping("/adm")
+    public ResponseEntity<?> update(@RequestParam("id") Integer id,
                                     @RequestBody RestLanguageDTO regionDTO,
                                     HttpServletRequest request) {
         HttpRequestUtil.getProfileId(request,ProfileRole.ADMIN);

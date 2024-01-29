@@ -11,26 +11,28 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDcwNzIsImlkIjoxLCJyb
 }
 
 ### <2> Update by id
-PUT http://localhost:8080/region/1
+PUT http://localhost:8080/region/adm?id=1
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTk0MjYsImlzcyI6Ikt1blV6VGVzdCJ9.Cg5XAM3TTjmazTE6W2An3sOR6xHlXo_Xvsnd-7KTcYPjjFltHtHAT8OfZpMzXbAYbzMDJeqLNwJUkvxfvenVVw
 
-{"nameUz": "uzbekistan",
-  "nameRu": "russian",
-  "nameEng": "english",
-  "orderNumber": 3
+
+{
+  "orderNumber": 7,
+  "nameRu": "qwe",
+  "nameUz": "qweqe",
+  "nameEng": "ewqeqwe"
 }
 
 ### <3> Delete by Id ==Vizible Bolean
-DELETE http://localhost:8080/region/adm/88
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+DELETE http://localhost:8080/region/adm/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTk0MjYsImlzcyI6Ikt1blV6VGVzdCJ9.Cg5XAM3TTjmazTE6W2An3sOR6xHlXo_Xvsnd-7KTcYPjjFltHtHAT8OfZpMzXbAYbzMDJeqLNwJUkvxfvenVVw
 
 
 ### <4> Get all list faqat admin jwt kelsa ishga tushadi
 GET http://localhost:8080/region/adm/getAllList
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
 
-### <5> get By lang
+### <5>Get By Lang <Any>    <AppLanguage<uz,ru,en>>
 GET http://localhost:8080/region/byLang?lang=uz
 Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNjY5MjQsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNTMzMjQsImlzcyI6Ikt1blV6VGVzdCJ9.eFG92LBm-oKqESLxWoCkZeLHcxEV7OMK_k5hOjjIscrUuM4RKDeSgDFHjql2Rm36K6MT44KIxAsUgE0a7li-9A
 

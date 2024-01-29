@@ -1,0 +1,770 @@
+GET http://localhost:8080/articleType/getByLang?lang=en
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T153327.200.json
+
+###
+
+GET http://localhost:8080/articleType/getByLang?lang=ru
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T153318.200.json
+
+###
+
+GET http://localhost:8080/articleType/getByLang?lang=uz
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T153303.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm/getall
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MjM1OTUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY2MDk5OTUsImlzcyI6Ikt1blV6VGVzdCJ9.rXc_z6olSToymxVbVstAvuSuGdvvU6RITBqaQiDzzXu1xiWzCuE3pLZV0VeJ-ksWJwSgMS709abfowEj0B6Hyw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T152041.200.json
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@mail.ru",
+  "password": "12345"
+}
+
+<> 2024-01-29T151955.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T145710.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T145610.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T145604.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T130615.400.txt
+
+###
+
+DELETE http://localhost:8080/articleType/adm?id=1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T130559.200.json
+
+###
+
+DELETE http://localhost:8080/articleType/adm?id=1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T123245.400.txt
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T122942.400.txt
+
+###
+
+DELETE http://localhost:8080/region/adm/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTk0MjYsImlzcyI6Ikt1blV6VGVzdCJ9.Cg5XAM3TTjmazTE6W2An3sOR6xHlXo_Xvsnd-7KTcYPjjFltHtHAT8OfZpMzXbAYbzMDJeqLNwJUkvxfvenVVw
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T122844.200.json
+
+###
+
+DELETE http://localhost:8080/region/adm1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T122735.404.json
+
+###
+
+POST http://localhost:8080/region/adm/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDcwNzIsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzM0NzIsImlzcyI6Ikt1blV6VGVzdCJ9._LAaAFOqZZ5ffjWxE05KtdmVmB7Cp3_ijVLxqPDulN3k3_BZcq8r9mn-yoUIFYGlumaWF1J9rIhCJzb6Vc56uw
+Content-Length: 94
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "orderNumber": 5,
+  "nameUz": "Uzbekistan",
+  "nameRu": "Rossia",
+  "nameEng": "Russian"
+}
+
+<> 2024-01-29T122536.200.json
+
+###
+
+PUT http://localhost:8080/region/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTk0MjYsImlzcyI6Ikt1blV6VGVzdCJ9.Cg5XAM3TTjmazTE6W2An3sOR6xHlXo_Xvsnd-7KTcYPjjFltHtHAT8OfZpMzXbAYbzMDJeqLNwJUkvxfvenVVw
+Content-Length: 86
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "orderNumber": 7,
+  "nameRu": "qwe",
+  "nameUz": "qweqe",
+  "nameEng": "ewqeqwe"
+}
+
+<> 2024-01-29T122443.200.json
+
+###
+
+PUT http://localhost:8080/region/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTk0MjYsImlzcyI6Ikt1blV6VGVzdCJ9.Cg5XAM3TTjmazTE6W2An3sOR6xHlXo_Xvsnd-7KTcYPjjFltHtHAT8OfZpMzXbAYbzMDJeqLNwJUkvxfvenVVw
+Content-Length: 81
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "2",
+  "nameRu": "qwe",
+  "nameUz": "qweqe",
+  "nameEng": "ewqeqwe"
+}
+
+<> 2024-01-29T122408.400.txt
+
+###
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@mail.ru",
+  "password": "12345"
+}
+
+<> 2024-01-29T122346.200.json
+
+###
+
+GET http://localhost:8080/region/adm/getAllList
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T122145.200.json
+
+###
+
+DELETE http://localhost:8080/region/adm1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T122138.404.json
+
+###
+
+POST http://localhost:8080/region/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Uzb",
+  "nameRu": "Ru",
+  "nameEng": "En"
+}
+
+<> 2024-01-29T122130.405.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121957.400.json
+
+###
+
+POST http://localhost:8080/articleType/adm
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "orderNumber": 5,
+  "nameRu": "Murodbek",
+  "nameUz": "Murodjon",
+  "nameEng": "Murod"
+}
+
+<> 2024-01-29T121951.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121905.400.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121846.400.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 2,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121828.400.json
+
+###
+
+PUT http://localhost:8080/articleType/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121812.400.json
+
+###
+
+PUT http://localhost:8080/articleType/adm/?id=2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 84
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}
+
+<> 2024-01-29T121653.404.json
+
+###
+
+PUT http://localhost:8080/articleType/adm/?id=2
+Content-Type: application/json
+Content-Length: 86
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{{"orderNumber": 1,
+"nameUz": "Murodbek",
+"nameRu": "Murodbne",
+"nameEng": "Murodne"}}
+
+###
+
+POST http://localhost:8080/region/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Uzb",
+  "nameRu": "Ru",
+  "nameEng": "En"
+}
+
+<> 2024-01-29T120449.404.json
+
+###
+
+POST http://localhost:8080/region/adm?id=1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Uzb",
+  "nameRu": "Ru",
+  "nameEng": "En"
+}
+
+<> 2024-01-29T120338.404.json
+
+###
+
+POST http://localhost:8080/region/adm/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 75
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Uzb",
+  "nameRu": "Ru",
+  "nameEng": "En"
+}
+
+<> 2024-01-29T120325.405.json
+
+###
+
+POST http://localhost:8080/profile/updateProfile?id=2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNzg3NzYsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNjUxNzYsImlzcyI6Ikt1blV6VGVzdCJ9.DEJiLtOHPBZEb89Ftbj8haT_Ip_LE5dDUQ0k49oronZYAXHgbzJSX49MH9NwDkfvFZ-r7x65jKYQfrWtuxwCAg
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "MurodbekAlisherovich",
+  "role": "ADMIN"
+}
+
+<> 2024-01-29T120045.404.json
+
+###
+
+PUT http://localhost:8080/region/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"nameUz": "uzbekistan",
+  "nameRu": "russian",
+  "nameEng": "english",
+  "orderNumber": 3
+}
+
+<> 2024-01-29T115900.404.json
+
+###
+
+DELETE http://localhost:8080/region/adm1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T115846.404.json
+
+###
+
+PUT http://localhost:8080/region/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"nameUz": "uzbekistan",
+  "nameRu": "russian",
+  "nameEng": "english",
+  "orderNumber": 3
+}
+
+<> 2024-01-29T115839.404.json
+
+###
+
+DELETE http://localhost:8080/region/adm/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T115831.200.json
+
+###
+
+DELETE http://localhost:8080/region/adm/88
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-01-29T115824.400.txt
+
+###
+
+PUT http://localhost:8080/region/1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"nameUz": "uzbekistan",
+  "nameRu": "russian",
+  "nameEng": "english",
+  "orderNumber": 3
+}
+
+<> 2024-01-29T115811.404.json
+
+###
+
+POST http://localhost:8080/region/adm/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDcwNzIsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzM0NzIsImlzcyI6Ikt1blV6VGVzdCJ9._LAaAFOqZZ5ffjWxE05KtdmVmB7Cp3_ijVLxqPDulN3k3_BZcq8r9mn-yoUIFYGlumaWF1J9rIhCJzb6Vc56uw
+Content-Length: 94
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "orderNumber": 5,
+  "nameUz": "Uzbekistan",
+  "nameRu": "Rossia",
+  "nameEng": "Russian"
+}
+
+<> 2024-01-29T115806.200.json
+
+###
+
+POST http://localhost:8080/articleType/adm
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "orderNumber": 5,
+  "nameRu": "Murodbek",
+  "nameUz": "Murodjon",
+  "nameEng": "Murod"
+}
+
+<> 2024-01-29T115758.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 90
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Murodbek",
+  "nameRu": "Murodbne",
+  "nameEng": "Murodne"}
+
+<> 2024-01-29T115419.400.txt
+
+###
+
+PUT http://localhost:8080/articleType/adm/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 90
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Murodbek",
+  "nameRu": "Murodbne",
+  "nameEng": "Murodne"}
+
+<> 2024-01-29T115406.404.json
+
+###
+
+PUT http://localhost:8080/articleType/adm/1
+Content-Type: application/json
+Content-Length: 90
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Murodbek",
+  "nameRu": "Murodbne",
+  "nameEng": "Murodne"}
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Content-Length: 90
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{"orderNumber": 1,
+  "nameUz": "Murodbek",
+  "nameRu": "Murodbne",
+  "nameEng": "Murodne"}
+
+<> 2024-01-29T115345.400.txt
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "nameEng": "murodbek",
+  "nameUz": "Murodbek",
+  "nameRu": "Mrbek"
+}
+
+<> 2024-01-29T115159.400.txt
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "nameEng": "murodbek",
+  "nameUz": "Murodbek",
+  "nameRu": "Mrbek",
+}
+
+<> 2024-01-29T115146.400.txt
+
+###
+
+POST http://localhost:8080/articleType/adm
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "uzbesittan",
+  "nameRu": "Murodbek",
+  "nameUz": "Murodjon",
+  "nameEng": "Murod"
+}
+
+<> 2024-01-29T115051.200.json
+
+###
+
+PUT http://localhost:8080/articleType/adm1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "nameEng": "murodbek",
+  "nameUz": "Murodbek",
+  "nameRu": "Mrbek"
+}
+
+<> 2024-01-29T114808.400.txt
+
+###
+
