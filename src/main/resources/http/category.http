@@ -5,9 +5,9 @@ Content-Type: application/json
 Authorization:  eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNjM0MDcsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNDk4MDcsImlzcyI6Ikt1blV6VGVzdCJ9.DhAbIe30bmvESvogcSf9z4kbcPzlzKujGUKE1GMexP2T9ww8LCyG941hPIZ0FhTNbWR9aHjUN1lQb5U9M9nLWw
 
 {"orderNumber": 1,
-  "nameEng": "englis",
-  "nameUz": "uzbek",
-  "nameRu": "Ruschada"
+  "nameEng": "englis1",
+  "nameUz": "uzbek1",
+  "nameRu": "Rus1"
 }
 ### <2> Update by id      <Intejer id>
 PUT http://localhost:8080/category/1
@@ -15,9 +15,9 @@ Content-Type: application/json
 Authorization:  eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNjM0MDcsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNDk4MDcsImlzcyI6Ikt1blV6VGVzdCJ9.DhAbIe30bmvESvogcSf9z4kbcPzlzKujGUKE1GMexP2T9ww8LCyG941hPIZ0FhTNbWR9aHjUN1lQb5U9M9nLWw
 
 {"orderNumber": 1,
-  "nameEng": "englis",
-  "nameUz": "uzbek",
-  "nameRu": "Ruschada"
+  "nameEng": "english2",
+  "nameUz": "uzbek2",
+  "nameRu": "Rus2"
 }
 
 ### <3> getAll

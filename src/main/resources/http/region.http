@@ -6,8 +6,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDcwNzIsImlkIjoxLCJyb
 {
   "orderNumber": 5,
   "nameUz": "Uzbekistan",
-  "nameRu": "Rossia",
-  "nameEng": "Russian"
+  "nameRu": "Uzbekistan",
+  "nameEng": "Uzbekistan"
 }
 
 ### <2> Update by id
@@ -18,9 +18,9 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTMwMjYsImlkIjoxLCJyb
 
 {
   "orderNumber": 7,
-  "nameRu": "qwe",
-  "nameUz": "qweqe",
-  "nameEng": "ewqeqwe"
+  "nameRu": "Turkmansitan",
+  "nameUz": "Turkmaniston",
+  "nameEng": "Turkman"
 }
 
 ### <3> Delete by Id ==Vizible Bolean

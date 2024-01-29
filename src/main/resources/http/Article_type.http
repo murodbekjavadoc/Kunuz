@@ -5,9 +5,9 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb
 
 {
   "orderNumber": 5,
-  "nameRu": "Murodbek",
-  "nameUz": "Murodjon",
-  "nameEng": "Murod"
+  "nameRu": "test1",
+  "nameUz": "test2",
+  "nameEng": "test3"
 }
 
 ### update  article type <Admin>
@@ -17,9 +17,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY1MTA3MjgsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1OTcxMjgsImlzcyI6Ikt1blV6VGVzdCJ9.Mu91I_ALngSycjEgGNVcS_4j9iISrID8q2xDmD4GWrr8O3968yS_996B-tUqyEM8ii6uo0h5uObmaMD1gOnRow
 
 {"orderNumber": 2,
-"nameUz": "Murodbek",
-"nameRu": "Murodbne",
-"nameEng": "Murodne"}
+"nameUz": "tests1",
+"nameRu": "tests2",
+"nameEng": "tests3"}
 
 ### Delete By id <Admin>
 DELETE http://localhost:8080/articleType/adm?id=1
