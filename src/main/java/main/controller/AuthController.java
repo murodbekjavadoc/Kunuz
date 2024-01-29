@@ -20,7 +20,6 @@ public class AuthController {
     public ResponseEntity<ProfileDTO> login(@RequestBody AuthDTO authDTO){
         return  ResponseEntity.ok(authService.auth(authDTO));
     }
-
     @PostMapping("/registration")
     public ResponseEntity<?> create(@RequestBody ProfileDTO profileDTO) {
         ProfileDTO dto = authService.create(profileDTO);

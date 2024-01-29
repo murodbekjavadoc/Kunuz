@@ -1,12 +1,13 @@
 ### <1> create by id
-POST http://localhost:8080/region
+POST http://localhost:8080/region/adm/
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzMzUyNzEsImlzcyI6Ikt1blV6VGVzdCJ9.Q2vfMdhLCzhxDfe_CZWQ-vvlsiHt7akITVoSk40CwDI-i899DNwQkwf-31UbzDRi-SYJr_eilbJM52u8UCZ8pA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDcwNzIsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzM0NzIsImlzcyI6Ikt1blV6VGVzdCJ9._LAaAFOqZZ5ffjWxE05KtdmVmB7Cp3_ijVLxqPDulN3k3_BZcq8r9mn-yoUIFYGlumaWF1J9rIhCJzb6Vc56uw
 
-{"nameUz": "uzbek",
-  "nameRu": "rus",
-  "nameEng": "english",
-  "orderNumber": 2
+{
+  "orderNumber": 5,
+  "nameUz": "Uzbekistan",
+  "nameRu": "Rossia",
+  "nameEng": "Russian"
 }
 
 ### <2> Update by id
@@ -21,12 +22,13 @@ Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNDg4NzEsImlkIjoxLCJyb2xlIjoi
 }
 
 ### <3> Delete by Id ==Vizible Bolean
-DELETE http://localhost:8080/region/1
+DELETE http://localhost:8080/region/adm/88
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
+
 
 ### <4> Get all list faqat admin jwt kelsa ishga tushadi
-GET http://localhost:8080/region/getAllList
-Authorization: eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDYyNjY5MjQsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDYzNTMzMjQsImlzcyI6Ikt1blV6VGVzdCJ9.eFG92LBm-oKqESLxWoCkZeLHcxEV7OMK_k5hOjjIscrUuM4RKDeSgDFHjql2Rm36K6MT44KIxAsUgE0a7li-9A
-
+GET http://localhost:8080/region/adm/getAllList
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MDY0NDY2MDUsImlkIjoxLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDY1MzMwMDUsImlzcyI6Ikt1blV6VGVzdCJ9.ZOnZ-Pjpccao_-_0QBJGRjJJq-OX5t0u8pWJ-RVP2BCjuVaUoHkqcv_JB_lPjEQRoddi0t65M3gqp6JDukxqvg
 
 ### <5> get By lang
 GET http://localhost:8080/region/byLang?lang=uz

@@ -1,6 +1,6 @@
 package main.servise;
 
-import main.dto.RegionDTO;
+import main.dto.RestLanguageDTO;
 import main.entity.RegionEntity;
 import main.enums.AppLanguage;
 import main.exp.AppBadException;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RegionService {
@@ -18,14 +17,12 @@ public class RegionService {
     private RegionRepository regionRepository;
 
     //task =1=
-    public RegionDTO create(RegionDTO dto) {
+    public RestLanguageDTO create(RestLanguageDTO dto) {
         RegionEntity entity = fromRegionDTOToRegionEntity(dto);
-        regionRepository.save(entity);
-        return dto;
-    }
+        regionRepository.save(entity);return dto;}
 
     // task =2=
-    public void update(Integer id, RegionDTO dto) {
+    public void update(Integer id, RestLanguageDTO dto) {
         RegionEntity entity = get(id);
         entity.setOrderNumber(dto.getOrderNumber());
         entity.setNameUz(dto.getNameUz());
@@ -42,9 +39,9 @@ public class RegionService {
     }
 
     // task =4=
-    public List<RegionDTO> getALl() {
+    public List<RestLanguageDTO> getALl() {
         Iterable<RegionEntity> listEntity = regionRepository.findAll();
-        List<RegionDTO> listDTO = new LinkedList<>();
+        List<RestLanguageDTO> listDTO = new LinkedList<>();
         for (RegionEntity entity : listEntity) {
             listDTO.add(setRegionDTO(entity));
         }
@@ -52,12 +49,12 @@ public class RegionService {
     }
 
     // task =5=
-    public List<RegionDTO> getByLang(AppLanguage lang) {
-        List<RegionDTO> dtoList = new LinkedList<>();
+    public List<RestLanguageDTO> getByLang(AppLanguage lang) {
+        List<RestLanguageDTO> dtoList = new LinkedList<>();
         Iterable<RegionEntity> all = regionRepository.findAll();
 
         for (RegionEntity entity : all) {
-            RegionDTO dto = new RegionDTO();
+            RestLanguageDTO dto = new RestLanguageDTO();
             dto.setId(entity.getId());
             switch (lang) {
                 case uz -> dto.setName(entity.getNameUz());
@@ -69,8 +66,8 @@ public class RegionService {
         }
         return dtoList;
     }
-    private RegionDTO setRegionDTO(RegionEntity entity) {
-        RegionDTO regionDTO = new RegionDTO();
+    private RestLanguageDTO setRegionDTO(RegionEntity entity) {
+        RestLanguageDTO regionDTO = new RestLanguageDTO();
         regionDTO.setId(entity.getId());
         regionDTO.setOrderNumber(entity.getOrderNumber());
         regionDTO.setVisible(entity.getVisible());
@@ -82,7 +79,7 @@ public class RegionService {
     }
 
     // ======================= Utils ==============================
-    private RegionEntity fromRegionDTOToRegionEntity(RegionDTO dto) {
+    private RegionEntity fromRegionDTOToRegionEntity(RestLanguageDTO dto) {
         RegionEntity entity = new RegionEntity();
         entity.setOrderNumber(dto.getOrderNumber());
         entity.setNameUz(dto.getNameUz());

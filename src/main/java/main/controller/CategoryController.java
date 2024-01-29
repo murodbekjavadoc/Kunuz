@@ -1,13 +1,12 @@
 package main.controller;
 
-import main.dto.CategoryDTO;
-import main.dto.JwtDTO;
+import jakarta.servlet.http.HttpServletRequest;
+import main.dto.RestLanguageDTO;
 import main.enums.AppLanguage;
 import main.enums.ProfileRole;
 import main.servise.CategoryService;
-import main.util.JWTUtil;
+import main.util.HttpRequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,52 +18,37 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @PostMapping("")
-    public ResponseEntity<CategoryDTO> create(@RequestBody CategoryDTO dto,
-                                              @RequestHeader(value = "Authorization", defaultValue = "") String jwt) {
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
-        CategoryDTO categoryDTO = categoryService.create(dto);
+    @PostMapping("/adm")
+    public ResponseEntity<RestLanguageDTO> create(@RequestBody RestLanguageDTO dto,
+                                              HttpServletRequest request) {
+        HttpRequestUtil.getProfileRoleAndID(request,ProfileRole.ADMIN);
+        RestLanguageDTO categoryDTO = categoryService.create(dto);
         return ResponseEntity.ok(categoryDTO);
     }
-    @PutMapping("{id}")
+    @PutMapping("/adm{id}")
     public ResponseEntity<?> updateById(@PathVariable("id") Integer id,
-                                        @RequestBody CategoryDTO dto,
-                                        @RequestHeader(value = "Authorization", defaultValue = " ") String jwt) {
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+                                        @RequestBody RestLanguageDTO dto,
+                                        HttpServletRequest request) {
+
+        HttpRequestUtil.getProfileRoleAndID(request,ProfileRole.ADMIN);
         categoryService.updateById(dto, id);
         return ResponseEntity.ok(true);
     }
-    @DeleteMapping("{id}")
+    @DeleteMapping("/adm{id}")
     public ResponseEntity<?> deleteById(@PathVariable ("id") Integer id,
-                                        @RequestHeader (value = "Authorization",defaultValue = " ") String jwt){
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+                                        HttpServletRequest request){
+        HttpRequestUtil.getProfileRoleAndID(request,ProfileRole.ADMIN);
         categoryService.deleteById(id);
         return ResponseEntity.ok(true);
     }
-    @GetMapping("/getAll")
-    public ResponseEntity<List<CategoryDTO>> getAll (@RequestHeader (value = "Authorization",defaultValue = " ") String jwt){
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+    @GetMapping("/adm/getAll")
+    public ResponseEntity<List<RestLanguageDTO>> getAll ( HttpServletRequest request){
+
+        HttpRequestUtil.getProfileId(request,ProfileRole.ADMIN);
         return ResponseEntity.ok(categoryService.getAll());
     }
     @GetMapping("/getLanguage")
-    public ResponseEntity<List<CategoryDTO>> getByLang(@RequestParam("lang") AppLanguage lang,
-                                                       @RequestHeader (value = "Authorization",defaultValue = "") String jwt){
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+    public ResponseEntity<List<RestLanguageDTO>> getByLang(@RequestParam("lang") AppLanguage lang){
         return ResponseEntity.ok(categoryService.getByLang(lang));
     }
 }

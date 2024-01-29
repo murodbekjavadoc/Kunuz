@@ -1,16 +1,12 @@
 package main.controller;
 
-import main.dto.JwtDTO;
-import main.dto.RegionDTO;
-import main.entity.RegionEntity;
+import jakarta.servlet.http.HttpServletRequest;
+import main.dto.RestLanguageDTO;
 import main.enums.AppLanguage;
 import main.enums.ProfileRole;
 import main.servise.RegionService;
-import main.util.JWTUtil;
-import org.hibernate.sql.Delete;
+import main.util.HttpRequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,57 +18,37 @@ public class RegionController {
     @Autowired
     private RegionService regionService;
 
-    //task =1=
-    @PostMapping("")
-    public ResponseEntity<RegionDTO> create(@RequestBody RegionDTO dto,
-                                            @RequestHeader(value = "Authorization") String jwt) {
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
-        RegionDTO regionDTO = regionService.create(dto);
+    @PostMapping("/adm/")
+    public ResponseEntity<RestLanguageDTO> create(@RequestBody RestLanguageDTO dto,
+                                            HttpServletRequest request) {
+        HttpRequestUtil.getProfileId(request, ProfileRole.ADMIN);
+        RestLanguageDTO regionDTO = regionService.create(dto);
         return ResponseEntity.ok(regionDTO);
     }
-
-    @DeleteMapping("{id}")
+    @DeleteMapping("/adm/{id}")
     public ResponseEntity<Boolean> deleteById(@PathVariable("id") Integer id,
-                                              @RequestHeader(value = "Authorization") String jwt) {
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+                                              HttpServletRequest request){
+        HttpRequestUtil.getProfileId(request);
         regionService.deleteById(id);
         return ResponseEntity.ok(true);
     }
-
-    @PutMapping("{id}")
-    public ResponseEntity<?> update(
-            @PathVariable("id") Integer id,
-            @RequestHeader(value = "Authorization", defaultValue = " ") String jwt,
-            @RequestBody RegionDTO regionDTO) {
-
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)){
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+    @PutMapping("/adm/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id,
+                                    @RequestBody RestLanguageDTO regionDTO,
+                                    HttpServletRequest request) {
+        HttpRequestUtil.getProfileId(request,ProfileRole.ADMIN);
         regionService.update(id, regionDTO);
         return ResponseEntity.ok(true);
     }
 
-    // task =3=
-    //task =4=
-    @GetMapping("/getAllList")
-    public ResponseEntity<List<RegionDTO>> getAll(@RequestHeader(value = "Authorization", defaultValue = " ") String jwt) {
-        JwtDTO jwtDTO = JWTUtil.decode(jwt);
-        if (!jwtDTO.getProfileRole().equals(ProfileRole.ADMIN)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+    @GetMapping("/adm/getAllList")
+    public ResponseEntity<List<RestLanguageDTO>> getAll(HttpServletRequest request) {
+        HttpRequestUtil.getProfileId(request,ProfileRole.ADMIN);
         return ResponseEntity.ok(regionService.getALl());
     }
-    // task =5=
     @GetMapping("/byLang")
-    public ResponseEntity<List<RegionDTO>> getByLang(@RequestParam(value = "lang", defaultValue = "uz") AppLanguage lang) {
-        List<RegionDTO> byLang = regionService.getByLang(lang);
+    public ResponseEntity<List<RestLanguageDTO>> getByLang(@RequestParam(value = "lang", defaultValue = "uz") AppLanguage lang) {
+        List<RestLanguageDTO> byLang = regionService.getByLang(lang);
         return ResponseEntity.ok(byLang);
     }
 

@@ -1,6 +1,6 @@
 package main.servise;
 
-import main.dto.ArticleTypeDTO;
+import main.dto.RestLanguageDTO;
 import main.entity.ArticleTypeEntity;
 import main.repository.ArticleTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ public class ArticleTypeService {
     private ArticleTypeRepository articleTypeRepository;
 
 //    @PostMapping("")
-    public ArticleTypeDTO create(ArticleTypeDTO dto) {
+    public RestLanguageDTO create(RestLanguageDTO dto) {
         ArticleTypeEntity entity = new ArticleTypeEntity();
         entity.setName_uz(dto.getNameUz());
         entity.setName_ru(dto.getNameRu());

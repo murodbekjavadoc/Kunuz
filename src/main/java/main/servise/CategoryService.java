@@ -1,6 +1,6 @@
 package main.servise;
 
-import main.dto.CategoryDTO;
+import main.dto.RestLanguageDTO;
 import main.entity.CategoryEntity;
 import main.enums.AppLanguage;
 import main.exp.AppBadException;
@@ -17,7 +17,7 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
 //    @PostMapping("")
-    public CategoryDTO create(CategoryDTO dto) {
+    public RestLanguageDTO create(RestLanguageDTO dto) {
         CategoryEntity entity = new CategoryEntity();
 
         entity.setOrderNumber(dto.getOrderNumber());
@@ -32,7 +32,7 @@ public class CategoryService {
         return dto;
     }
 //    @PutMapping("{id}")
-    public void updateById(CategoryDTO dto, Integer id) {
+    public void updateById(RestLanguageDTO dto, Integer id) {
         CategoryEntity entity = get(id);
         if (!(dto.getOrderNumber() ==null)){
             entity.setOrderNumber(dto.getOrderNumber());
@@ -58,12 +58,12 @@ public class CategoryService {
         categoryRepository.deleteById(id);
     }
 
-    public List<CategoryDTO> getAll() {
+    public List<RestLanguageDTO> getAll() {
         Iterable<CategoryEntity> entityList = categoryRepository.findAll();
-        List<CategoryDTO> dtoList = new LinkedList<>();
+        List<RestLanguageDTO> dtoList = new LinkedList<>();
 
         for(CategoryEntity entities : entityList){
-            CategoryDTO dto = new CategoryDTO();
+            RestLanguageDTO dto = new RestLanguageDTO();
             dto.setOrderNumber(entities.getOrderNumber());
             dto.setNameUz(entities.getNameUz());
             dto.setNameRu(entities.getNameRu());
@@ -74,11 +74,11 @@ public class CategoryService {
         return dtoList;
     }
 
-    public List<CategoryDTO> getByLang(AppLanguage lang) {
+    public List<RestLanguageDTO> getByLang(AppLanguage lang) {
         Iterable<CategoryEntity> entities = categoryRepository.findAll();
-        List<CategoryDTO> dtoList = new LinkedList<>();
+        List<RestLanguageDTO> dtoList = new LinkedList<>();
         for (CategoryEntity entity : entities) {
-            CategoryDTO dto = new CategoryDTO();
+            RestLanguageDTO dto = new RestLanguageDTO();
             dto.setId(entity.getId());
             switch (lang){
                 case uz -> dto.setName(entity.getNameUz());

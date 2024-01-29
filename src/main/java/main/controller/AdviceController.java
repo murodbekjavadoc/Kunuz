@@ -2,6 +2,7 @@ package main.controller;
 
 import io.jsonwebtoken.JwtException;
 import main.exp.AppBadException;
+import main.exp.ForbiddenException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -14,6 +15,11 @@ public class AdviceController {
     private ResponseEntity<?> handle (AppBadException e ){
         return ResponseEntity.badRequest().body(e.getMessage());
     }
+
+    private ResponseEntity<?> handle(ForbiddenException e){
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
+
     @ExceptionHandler(JwtException.class)
     private ResponseEntity<?> handle(JwtException e){
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
